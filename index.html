@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Saya | Mahasiswa IT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#a78bfa',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .dark .glass {
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass top-0">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold tracking-tighter">MY<span class="text-primary">PORTFOLIO</span></a>
+            <div class="hidden md:flex space-x-8 font-medium text-sm">
+                <a href="#home" class="hover:text-primary transition">Home</a>
+                <a href="#about" class="hover:text-primary transition">About</a>
+                <a href="#projects" class="hover:text-primary transition">Projects</a>
+                <a href="#skills" class="hover:text-primary transition">Skills</a>
+                <a href="#contact" class="hover:text-primary transition">Contact</a>
+            </div>
+            <button id="dark-mode-toggle" class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition">
+                <i data-lucide="moon" id="theme-icon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center pt-20 px-6">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div class="order-2 md:order-1">
+                <h2 class="text-primary font-semibold mb-2">Halo, Saya</h2>
+                <h1 class="text-5xl md:text-7xl font-bold mb-4">Salsabila</h1>
+                <p class="text-lg text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+                    Mahasiswa IT yang memiliki minat dalam pengembangan web dan desain digital. Fokus menciptakan solusi teknologi yang estetis dan fungsional.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#projects" class="bg-primary hover:bg-purple-600 text-white px-8 py-3 rounded-full font-medium transition shadow-lg shadow-blue-500/30 transform hover:-translate-y-1">Lihat Project</a>
+                    <a href="#contact" class="border border-slate-300 dark:border-slate-700 px-8 py-3 rounded-full font-medium hover:bg-slate-100 dark:hover:bg-slate-800 transition transform hover:-translate-y-1">Hubungi Saya</a>
+                </div>
+            </div>
+            <div class="order-1 md:order-2 flex justify-center">
+                <div class="relative w-64 h-64 md:w-80 md:h-80">
+                    <div class="absolute inset-0 bg-primary rounded-3xl rotate-6 opacity-20"></div>
+                    <!-- Ganti src dengan foto kamu -->
+                    <img src="foto.jpeg" alt="Foto Profil" class="relative z-10 w-full h-full object-cover rounded-3xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-24 bg-white dark:bg-slate-900 transition-colors">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-8">Tentang Saya</h2>
+            <div class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed space-y-4">
+                <p>
+                    Perjalanan saya di dunia IT dimulai saat saya menyadari bahwa baris kode bisa berubah menjadi solusi yang membantu banyak orang. Saat ini saya sedang menempuh pendidikan di bidang Informatika.
+                </p>
+                <p>
+                    Saya memiliki gairah tinggi dalam membangun interface website yang bersih dan pengalaman pengguna yang intuitif. Selain ngoding, saya sering menghabiskan waktu mempelajari tren desain UI/UX terbaru.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center">Project Pilihan</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 dark:border-slate-700">
+                    <div class="h-48 bg-slate-200 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Aplikasi Tahfidz</h3>
+                        <p class="text-sm text-slate-500 mb-4 line-clamp-2">Aplikasi untuk memonitoring setoran hafalan santri secara real-time.</p>
+                        <div class="flex gap-2 flex-wrap mb-4">
+                            <span class="text-xs px-3 py-1 bg-blue-100 text-blue-600 dark:bg-blue-900/30 rounded-full font-medium">React Native</span>
+                            <span class="text-xs px-3 py-1 bg-green-100 text-green-600 dark:bg-green-900/30 rounded-full font-medium">Firebase</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 dark:border-slate-700">
+                    <div class="h-48 bg-slate-200 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Landing Page Bisnis</h3>
+                        <p class="text-sm text-slate-500 mb-4">Website pemasaran responsif dengan optimasi SEO dan desain modern.</p>
+                        <div class="flex gap-2 flex-wrap mb-4">
+                            <span class="text-xs px-3 py-1 bg-blue-100 text-blue-600 dark:bg-blue-900/30 rounded-full font-medium">Tailwind CSS</span>
+                            <span class="text-xs px-3 py-1 bg-orange-100 text-orange-600 dark:bg-orange-900/30 rounded-full font-medium">HTML5</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 dark:border-slate-700">
+                    <div class="h-48 bg-slate-200 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=500&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Sistem Inventaris</h3>
+                        <p class="text-sm text-slate-500 mb-4">Dashboard untuk mengelola stok barang pada toko kecil dengan fitur laporan.</p>
+                        <div class="flex gap-2 flex-wrap mb-4">
+                            <span class="text-xs px-3 py-1 bg-yellow-100 text-yellow-600 dark:bg-yellow-900/30 rounded-full font-medium">JavaScript</span>
+                            <span class="text-xs px-3 py-1 bg-purple-100 text-purple-600 dark:bg-purple-900/30 rounded-full font-medium">Node.js</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 bg-white dark:bg-slate-900">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center">Keahlian</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800 hover:border-primary border border-transparent transition shadow-sm">
+                    <i data-lucide="code-2" class="mx-auto mb-3 text-primary"></i>
+                    <p class="font-semibold">HTML & CSS</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800 hover:border-primary border border-transparent transition shadow-sm">
+                    <i data-lucide="component" class="mx-auto mb-3 text-primary"></i>
+                    <p class="font-semibold">JavaScript</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800 hover:border-primary border border-transparent transition shadow-sm">
+                    <i data-lucide="palette" class="mx-auto mb-3 text-primary"></i>
+                    <p class="font-semibold">Figma / Design</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800 hover:border-primary border border-transparent transition shadow-sm">
+                    <i data-lucide="database" class="mx-auto mb-3 text-primary"></i>
+                    <p class="font-semibold">MySQL</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-16">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6">Hubungi Saya</h2>
+                    <p class="text-slate-600 dark:text-slate-400 mb-8">Saya terbuka untuk kolaborasi project atau tawaran magang. Mari terhubung!</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+                                <i data-lucide="mail" class="w-5 h-5"></i>
+                            </div>
+                            <span>emailanda@gmail.com</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+                                <i data-lucide="linkedin" class="w-5 h-5"></i>
+                            </div>
+                            <span>LinkedIn Profile</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+                                <i data-lucide="instagram" class="w-5 h-5"></i>
+                            </div>
+                            <span>@instagramanda</span>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium mb-1">Nama</label>
+                        <input type="text" class="w-full px-4 py-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-primary transition">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-1">Email</label>
+                        <input type="email" class="w-full px-4 py-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-primary transition">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-1">Pesan</label>
+                        <textarea rows="4" class="w-full px-4 py-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-primary transition"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-primary text-white font-bold py-3 rounded-xl hover:bg-purple-600 transition shadow-lg">Kirim Pesan</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-slate-200 dark:border-slate-800 text-center text-sm text-slate-500">
+        <p>&copy; 2023 Nama Lengkap. Dibuat dengan antusiasme.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Inisialisasi Ikon
+        lucide.createIcons();
+
+        // Dark Mode Toggle Logic
+        const themeBtn = document.getElementById('dark-mode-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const html = document.documentElement;
+
+        themeBtn.addEventListener('click', () => {
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                themeIcon.setAttribute('data-lucide', 'moon');
+                localStorage.theme = 'light';
+            } else {
+                html.classList.add('dark');
+                themeIcon.setAttribute('data-lucide', 'sun');
+                localStorage.theme = 'dark';
+            }
+            lucide.createIcons(); // Refresh icons
+        });
+
+        // Check for saved theme
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+            themeIcon.setAttribute('data-lucide', 'sun');
+            lucide.createIcons();
+        }
+    </script>
+</body>
+</html>
